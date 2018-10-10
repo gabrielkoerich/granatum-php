@@ -6,9 +6,6 @@ class State extends ApiResource
 {
     /**
      * Find a state by id.
-     *
-     * @param  string  $name
-     * @return array|null
      */
     public function findById($id)
     {
@@ -17,9 +14,6 @@ class State extends ApiResource
 
     /**
      * Find a state by name.
-     *
-     * @param  string  $name
-     * @return array|null
      */
     public function findByName(string $name)
     {

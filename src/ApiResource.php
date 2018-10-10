@@ -31,10 +31,8 @@ abstract class ApiResource extends GranatumObject
 
     /**
      * Get or set the Http Client.
-     *
-     * @param Client $client
      */
-    public function setHttpClient(Client $client)
+    public function setHttpClient(Client $client): self
     {
         $this->client = $client;
 
@@ -43,19 +41,14 @@ abstract class ApiResource extends GranatumObject
 
     /**
      * Get or set the Http Client.
-     *
-     * @param Client $client
      */
-    public function getHttpClient()
+    public function getHttpClient(): Client
     {
         return $this->client ?: new Client;
     }
 
     /**
      * Get only numbers from a given value.
-     *
-     * @param  string|int $value
-     * @return int
      */
     protected function getNumbers($value)
     {
@@ -64,8 +57,6 @@ abstract class ApiResource extends GranatumObject
 
     /**
      * Get all of the specified resource.
-     *
-     * @return Collection
      */
     public function all(array $options = []): Collection
     {
@@ -76,10 +67,6 @@ abstract class ApiResource extends GranatumObject
 
     /**
      * Find a resource by a key/value.
-     *
-     * @param  string  $key
-     * @param  string  $value
-     * @return array|null
      */
     public function findBy(string $key, $value, array $options = [])
     {
@@ -88,8 +75,6 @@ abstract class ApiResource extends GranatumObject
 
     /**
      * Get all of the specified resource.
-     *
-     * @return mixed
      */
     public function create(array $data, array $options = []): self
     {
@@ -102,8 +87,6 @@ abstract class ApiResource extends GranatumObject
 
     /**
      * Get a given resource.
-     *
-     * @return mixed
      */
     public function find(int $id, array $options = []): self
     {
@@ -114,8 +97,6 @@ abstract class ApiResource extends GranatumObject
 
     /**
      * Update a given resource.
-     *
-     * @return mixed
      */
     public function update($id, $data = null, array $options = []): self
     {
@@ -133,8 +114,6 @@ abstract class ApiResource extends GranatumObject
 
     /**
      * Delete a given resource.
-     *
-     * @return mixed
      */
     public function delete(int $id = null, array $options = []): int
     {
@@ -145,8 +124,6 @@ abstract class ApiResource extends GranatumObject
 
     /**
      * Get the resource endpoint.
-     *
-     * @return string
      */
     private function getResourceUri(int $id = null): string
     {
@@ -159,8 +136,6 @@ abstract class ApiResource extends GranatumObject
 
     /**
      * Get the resource options.
-     *
-     * @return string
      */
     private function getOptions(array $options = null): array
     {
@@ -175,8 +150,6 @@ abstract class ApiResource extends GranatumObject
 
     /**
      * Get the resource name.
-     *
-     * @return string
      */
     public function getResource(): string
     {
@@ -187,8 +160,6 @@ abstract class ApiResource extends GranatumObject
 
     /**
      * Create a new instance.
-     *
-     * @return self
      */
     protected function newInstance()
     {
@@ -197,8 +168,6 @@ abstract class ApiResource extends GranatumObject
 
     /**
      * Get the API token.
-     *
-     * @return string
      */
     private function getApiToken(): ?string
     {
@@ -207,8 +176,6 @@ abstract class ApiResource extends GranatumObject
 
     /**
      * Get the API base.
-     *
-     * @return string
      */
     private function getApiBase(): string
     {

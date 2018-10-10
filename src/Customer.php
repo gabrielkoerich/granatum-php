@@ -6,9 +6,6 @@ class Customer extends ApiResource
 {
     /**
      * Find a customer by document.
-     *
-     * @param  string  $document
-     * @return array|null
      */
     public function findByDocument(string $document)
     {

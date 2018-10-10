@@ -8,9 +8,6 @@ class City extends ApiResource
 {
     /**
      * Find a city from a given state.
-     *
-     * @param  string  $name
-     * @return array|null
      */
     public function getFromState($state_id): Collection
     {

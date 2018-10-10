@@ -24,8 +24,6 @@ abstract class GranatumObject implements ArrayAccess
 
     /**
      * Transform a response into a collection.
-     *
-     * @param  ResponseInterface $response
      */
     protected function toCollection(ResponseInterface $response): Collection
     {
@@ -38,9 +36,6 @@ abstract class GranatumObject implements ArrayAccess
 
     /**
      * Create the object based on a response.
-     *
-     * @param  ResponseInterface $response
-     * @return self
      */
     protected function createFromResponse(ResponseInterface $response): self
     {
@@ -49,9 +44,6 @@ abstract class GranatumObject implements ArrayAccess
 
     /**
      * Get the response content.
-     *
-     * @param  ResponseInterface $response
-     * @return mixed
      */
     protected function getContentFromResponse(ResponseInterface $response)
     {
@@ -60,8 +52,6 @@ abstract class GranatumObject implements ArrayAccess
 
     /**
      * Set the object values.
-     *
-     * @param array $values
      */
     public function setValues($values)
     {
@@ -72,9 +62,6 @@ abstract class GranatumObject implements ArrayAccess
 
     /**
      * Set the value for a given offset.
-     *
-     * @param  mixed  $offset
-     * @param  mixed  $value
      */
     public function offsetSet($offset, $value)
     {
@@ -87,19 +74,14 @@ abstract class GranatumObject implements ArrayAccess
 
     /**
      * Determine if the given attribute.
-     *
-     * @param  mixed  $offset
-     * @return bool
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->values[$offset]);
     }
 
     /**
      * Unset the value for a given offset.
-     *
-     * @param  mixed  $offset
      */
     public function offsetUnset($offset)
     {
@@ -108,9 +90,6 @@ abstract class GranatumObject implements ArrayAccess
 
     /**
      * Get the value for a given offset.
-     *
-     * @param  mixed  $offset
-     * @return mixed
      */
     public function offsetGet($offset)
     {
@@ -119,9 +98,6 @@ abstract class GranatumObject implements ArrayAccess
 
     /**
      * Dynamically retrieve a value.
-     *
-     * @param  string  $offset
-     * @return mixed
      */
     public function __get($offset)
     {
@@ -130,8 +106,6 @@ abstract class GranatumObject implements ArrayAccess
 
     /**
      * Return as an array.
-     *
-     * @return array
      */
     public function toArray(): array
     {
@@ -140,8 +114,6 @@ abstract class GranatumObject implements ArrayAccess
 
     /**
      * Return as a string.
-     *
-     * @return string
      */
     public function __toString(): string
     {

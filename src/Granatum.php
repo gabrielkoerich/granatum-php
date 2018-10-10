@@ -20,8 +20,6 @@ class Granatum
 
     /**
      * Set the API token.
-     *
-     * @param string
      */
     public static function setApiToken(string $token)
     {
