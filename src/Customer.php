@@ -7,7 +7,7 @@ class Customer extends ApiResource
     /**
      * Find a customer by document.
      */
-    public function findByDocument(string $document)
+    public function findByDocument(string $document): ?self
     {
         $customers = $this->all();
 

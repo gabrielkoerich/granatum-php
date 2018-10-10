@@ -50,7 +50,7 @@ abstract class ApiResource extends GranatumObject
     /**
      * Get only numbers from a given value.
      */
-    protected function getNumbers($value)
+    protected function getNumbers(string $value): string
     {
         return preg_replace('/[^0-9]/', '', $value);
     }

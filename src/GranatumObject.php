@@ -45,7 +45,7 @@ abstract class GranatumObject implements ArrayAccess
     /**
      * Get the response content.
      */
-    protected function getContentFromResponse(ResponseInterface $response)
+    protected function getContentFromResponse(ResponseInterface $response): ?array
     {
         return json_decode($response->getBody()->getContents(), true);
     }
@@ -53,7 +53,7 @@ abstract class GranatumObject implements ArrayAccess
     /**
      * Set the object values.
      */
-    public function setValues($values)
+    public function setValues($values): self
     {
         $this->values = (array) $values;
 
@@ -63,7 +63,7 @@ abstract class GranatumObject implements ArrayAccess
     /**
      * Set the value for a given offset.
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->values[] = $value;
@@ -83,7 +83,7 @@ abstract class GranatumObject implements ArrayAccess
     /**
      * Unset the value for a given offset.
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->values[$offset]);
     }

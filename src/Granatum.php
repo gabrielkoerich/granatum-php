@@ -21,7 +21,7 @@ class Granatum
     /**
      * Set the API token.
      */
-    public static function setApiToken(string $token)
+    public static function setApiToken(string $token): void
     {
         self::$token = $token;
     }
