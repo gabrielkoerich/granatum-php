@@ -1,0 +1,24 @@
+{
+    "name": "bulldesk/granatum-php",
+    "description": "Granatum",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gabriel Koerich",
+            "email": "gabriel@bulldesk.com.br"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "tightenco/collect": "^5.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bulldesk\\Granatum\\": "src/"
+        }
+    }
+}
