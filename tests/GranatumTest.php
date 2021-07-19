@@ -1,12 +1,12 @@
 <?php
 
 use GuzzleHttp\Psr7;
-use Bulldesk\Granatum;
 use GuzzleHttp\Client;
+use GabrielKoerich\Granatum;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Handler\MockHandler;
-use Bulldesk\Granatum\Customer;
+use GabrielKoerich\Granatum\Customer;
 
 class GranatumTest extends \PHPUnit\Framework\TestCase
 {
