@@ -1,5 +1,5 @@
 {
-    "name": "bulldesk/granatum-php",
+    "name": "gabrielkoerich/granatum-php",
     "description": "A PHP 7+ library for the Granatum API.",
     "type": "library",
     "license": "MIT",
@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Bulldesk\\Granatum\\": "src/"
+            "GabrielKoerich\\Granatum\\": "src/"
         }
     }
 }

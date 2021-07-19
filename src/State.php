@@ -1,6 +1,6 @@
 <?php
 
-namespace Bulldesk\Granatum;
+namespace GabrielKoerich\Granatum;
 
 class State extends ApiResource
 {
