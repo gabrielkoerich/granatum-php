@@ -9,24 +9,21 @@ abstract class ApiResource extends GranatumObject
 {
     /**
      * The http client.
-     *
-     * @var \GuzzleHttp\Client
      */
     private $client;
 
     /**
      * The class map.
-     *
-     * @var array
      */
-    private $resourceMap = [
-        'category' => 'categorias',
-        'customer' => 'clientes',
+    private static $resourceMap = [
         'account' => 'contas',
-        'entry' => 'lancamentos',
-        'city' => 'cidades',
-        'state' => 'estados',
         'bank' => 'banco',
+        'category' => 'categorias',
+        'city' => 'cidades',
+        'customer' => 'clientes',
+        'entry' => 'lancamentos',
+        'state' => 'estados',
+        'transfer' => 'transferencias',
     ];
 
     /**
@@ -149,13 +146,21 @@ abstract class ApiResource extends GranatumObject
     }
 
     /**
+     * Add a resource map.
+     */
+    public static function addResourceMap(string $key, string $value): void
+    {
+        self::$resourceMap[$key] = $value;
+    }
+
+    /**
      * Get the resource name.
      */
     public function getResource(): string
     {
         $class = basename(str_replace('\\', '/', get_called_class()));
 
-        return $this->resourceMap[str_replace('\\', '', strtolower($class))];
+        return $this::$resourceMap[str_replace('\\', '', strtolower($class))];
     }
 
     /**
